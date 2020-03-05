@@ -13,7 +13,7 @@ In this work test you'll be required to build an API as well as a sample client 
 Your task is to create an API that receives JSON packets to send SMS and email messages, you don't have
 to actually send the messages, but rather just handle the requests.
 
-Requirements:
+## Requirements
 
 1. The API must require authorization. Using Bearer tokens in the HTTP headers is how we currently handle it.
 2. You must handle every error you can think of, from input errors to database errors.
@@ -24,16 +24,16 @@ Requirements:
 7. Assume that multiple clients will use your API and thus client information must be logged for every packet. Clients must also have different authorization tokens to identify them as such.
 8. The API must include at least the following 2 routes:
 
-	a. /api/submit
+	a. `/api/submit`
 		You will submit the JSON packets for messages to this route
 
-	b. /api/message/{id}
+	b. `/api/message/{id}`
 		This route will return basic information about the message that was previously sent
 		to the API. For SMS you must return at least cellphone number and SMS text, for email, the email address and HTML body. 
-		Note: Clients must only be able to retrieve their own messages.
+		**Note:** Clients must only be able to retrieve their own messages.
 
 
-Restrictions:
+## Restrictions
 
 1. You are free to use any language you want given that your API isn't 'hosted'. By 'hosted' we mean
 languages like PHP and ASP.NET. We'd like to see how you build a long running process which we can't do
@@ -48,6 +48,6 @@ Both are free and open-source.
 6. You are prohibited from posting the task online to any forum for any sort of help on building the API. 
 7. You are free to use resources that you would in a normal programming task, like Google, documentation, etc.
 
-Submitting your work:
+## Submitting your work
 
 We use GitHub for all code, we'd like you to create your own repository and commit your code there.
