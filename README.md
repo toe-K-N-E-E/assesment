@@ -51,3 +51,4 @@ Both are free and open-source.
 ## Submitting your work
 
 We use GitHub for all code, we'd like you to create your own repository and commit your code there.
+Please include a README to explain how to get your client and server running as well as what needs to be installed.
