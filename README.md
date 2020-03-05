@@ -5,7 +5,7 @@ mimic the actual work you'll be doing if you should join iLiveIt instead of algo
 that you might be used to.
 
 As we discussed in the first interview we are moving our services to Kubernetes and running everything
-in containers. While the move to the new architecture will greatly simplify building services one thing 
+in containers. While the move to the new architecture will greatly simplify building services; one thing 
 will still be present for a long time: APIs.
 
 In this work test you'll be required to build an API as well as a sample client that uses your API. 
