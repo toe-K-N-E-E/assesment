@@ -1,4 +1,70 @@
+import datetime
 from app import db
+
+
+
+class TransactionEmail( db.Model ):
+    """This will be a single email transaction"""
+
+    #this is the transaction ID
+    id = db.Column( db.Integer, primary_key=True )
+
+    #this is the client token
+    client_token = db.Column( db.String, index=True )
+
+    #this is the email address
+    email_address = db.Column( db.String  )
+
+    #this is the transaction datetime
+    transaction_datetime = db.Column( db.DateTime )
+
+    def __init__( self, client_tokenP, email_addressP ):
+        """class constructor that will add timestamp
+        :param client_tokenP:
+        :param email_addressP:
+        """
+        self.client_token =client_tokenP
+        self.email_address = email_addressP
+        self.transaction_datetime = getCurrentDateTime()
+
+
+
+
+class TransactionSMS( db.Model ):
+    """This will be a single sms transaction"""
+
+    #this is the transaction ID
+    id = db.Column( db.Integer, primary_key=True )
+
+    #this is the client token
+    client_token = db.Column( db.String, index=True )
+
+    #this is the contact number
+    contact_number = db.Column( db.String )
+
+    #this is the transaction datetime
+    transaction_datetime = db.Column( db.DateTime )
+
+    def __init__( self, client_tokenP, contact_numberP ):
+        """class constructor that will add timestamp
+        :param client_tokenP: this is the client ID
+        :param contact_numberP: this is the cell number sms will be sent to
+        """
+        self.client_token =client_tokenP
+        self.contact_number = contact_numberP
+        self.transaction_datetime = getCurrentDateTime()
+
+
+
+
+class RemoteClient( db.Model ):
+    """This will hold remote client"""
+
+    #this is table row ID
+    id = db.Column( db.Integer, primary_key=True )
+
+    #this is client token
+    client_token = db.Column( db.String, index=True )
 
 
 
@@ -42,3 +108,14 @@ class Message( db.Model ):
 
     #this is the message content
     content = db.Column( db.String )
+
+
+
+
+def getCurrentDateTime():
+    """This will get the current datetime
+    :return: datetime string will be returned
+    """
+    now = datetime.now()
+    return now.strftime( "%d/%m/%Y %H:%M:%S" )
+
