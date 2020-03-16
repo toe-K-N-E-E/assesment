@@ -3,7 +3,6 @@
 2. Having worked mostly on cloud platforms and worked in a place where authentication was already implemented, I havent implemented authentication. But can learn how to do that
 3. For now the token will be placed inside the request body
 
-FLASK_APP=microblog.py
 
 ##setup
 1. install python 3.8 ( install pycharm as this was written and tested on pycharm )
