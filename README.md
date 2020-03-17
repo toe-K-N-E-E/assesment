@@ -3,7 +3,6 @@
 2. Having worked mostly on cloud platforms and worked in a place where authentication was already implemented, I havent implemented authentication. But can learn how to do that
 3. For now the token will be placed inside the request body
 
-FLASK_APP=microblog.py
 
 ##setup
 1. install python 3.8 ( install pycharm as this was written and tested on pycharm )
@@ -85,3 +84,17 @@ FLASK_APP=microblog.py
     -description
         
         This will return the details of either the sms or email message that is being requested
+        
+        
+##How to use client
+1. run client.py as defined in app/client
+2. Menu will be presented
+3. Select Options
+    -Menu Options:
+        
+        1: This will be used to create user ---> when creation is done token will automatically be sent so no need to authorize
+        2: If the username is know, this option will request a token( As explained have not implemented authorization )
+        3: This will send an sms as prompted by the menu( must have token )
+        4: This will send an email as prompted by the menu( must have token )
+        5: This will hold details of the last sent message( sms or email )
+        6: This will terminate program

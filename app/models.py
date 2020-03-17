@@ -218,6 +218,4 @@ def commitToDatabase():
 
 
 
-if __name__ == "__main__":
-    client = RemoteClient( "hello" )
-    commitToDatabase()
+
